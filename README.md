@@ -1,29 +1,35 @@
-# kurdish-philosophy-Hub# Kurdish Philosophy Hub | ناوەندی فەلسەفەی کوردی
+![alt text](https://img.shields.io/badge/Website-jiridastkrd.com-blue.svg) ![alt text](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)
 
-[![Website](https://img.shields.io/badge/Website-jiridastkrd.com-blue.svg)](https://jiridastkrd.com/)
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+ئەم پڕۆژەیە هەوڵێکە بۆ دامەزراندنی گەورەترین بنکەی دیجیتاڵیی دەقە فەلسەفییە وەرگێڕدراوەکان بۆ سەر زمانی کوردی. ئەم کۆگە (repository)ـیە، بنکەی فەرمیی داتاکانی پڕۆژەی [jiridastkrd](https://jiridastkrd.com/)ە.
 
-This repository is the official data hub for the **[jiridastkrd.com](https://jiridastkrd.com/)** project. It contains structured, parallel translations of major philosophical works into the Kurdish language. Our goal is to create a rich, open, and accessible digital resource for students, researchers, and enthusiasts of philosophy in the Kurdish-speaking world.
+لێرەدا، وەرگێڕانی سیستەماتیک و هاوتەریبی گرنگترین بەرهەمە فەلسەفییەکان بە فۆرماتێکی ستانداردکراو کۆ دەکرێنەوە. ئامانجمان بنیاتنانی ژێرخانێکی زانیاریی دەوڵەمەند، کراوە، و بەردەستە بۆ خوێنکاران، توێژەران، و هەموو هۆگرانی فەلسەفە و پەرەپێدەرانی بواری تەکنەلۆژیی لە کورددا.
 
-ئەم ڕیپۆزیتۆرییە ناوەندی فەرمیی داتای پڕۆژەی **[jiridastkrd.com](https://jiridastkrd.com/)**ـە. وەرگێڕانی هاوتەریبی بەرهەمە فەلسەفییە گرنگەکانی بۆ سەر زمانی کوردی لەخۆدەگرێت. ئامانجمان دروستکردنی سەرچاوەیەکی دیجیتاڵیی دەوڵەمەند, کراوە و بەردەستە بۆ قوتابیان، توێژەران و هۆگرانی فەلسەفە لە جیهانی کوردزماندا.
+پێکهاتەی پڕۆژەکە
 
----
+بۆ دڵنیابوون لە ڕوونی و ئاسانیی فراوانکردنی لە داهاتوودا، داتاکان بە شێوازێکی پلەبەندی (hierarchical) ڕێک خراون. هەموو وەرگێڕانەکان لەناو فایلگەلی .jsonـدا پاشەکەوت کراون. بەکارهێنانی فۆرماتی JSON یارمەتیدەرە بۆ پاراستنی پێکهاتەیەکی هاوتەریب و وردبین لە نێوان دەقی سەرچاوە (زمانی ڕەسەن) و دەقی وەرگێڕدراو (کوردی).
 
-## Project Structure | پێکهاتەی پرۆژەکە
+پێکهاتەی فایلی JSON
 
-The repository is organized hierarchically to ensure clarity and scalability. All translations are stored in `.json` format to maintain a parallel structure between the original text and its Kurdish translation.
+هەر فایلێکی JSON پێکهاتووە لە زنجیرەیەک (array) لە ئۆبجێکتەکان. هەر ئۆبجێکتێک نوێنەرایەتیی یەکەیەکی دەق (بۆ نموونە، ڕستەیەک یان پەرەگرافێک) و وەرگێڕانەکەی دەکات. ئەم پێکهاتەیە بەم شێوەیەیە:
 
-پڕۆژەکە بە شێوەیەکی پلەبەندی ڕێکخراوە بۆ دڵنیابوون لە ڕوونی و توانای گەشەکردن. هەموو وەرگێڕانەکان لە فۆرماتی `.json`ـدا هەڵگیراون بۆ پاراستنی پێکهاتەیەکی هاوتەریب لە نێوان دەقی ڕەسەن و وەرگێڕانە کوردییەکەیدا.
+id: ناسێنەرێکی تایبەت بۆ هەر بەشێک، کە یارمەتیدەرە بۆ ڕێکخستن و ئاماژەپێکردن.
 
-The structure is as follows:
+original_lang: کۆدی زمانی ڕەسەنی دەقەکە (بۆ نموونە grc بۆ یۆنانیی کۆن).
 
-### JSON File Format | فۆرماتی فایلی JSON
+original_text: دەقە ڕەسەنەکە.
 
-Each JSON file contains an array of objects, where each object represents a segment of text (e.g., a sentence or paragraph) and its corresponding translation.
+translation_lang: کۆدی زمانی وەرگێڕان (لێرەدا ku بۆ کوردی).
 
-هەر فایلێکی JSON زنجیرەیەک ئۆبجێکتی تێدایە، کە هەر ئۆبجێکتێک نوێنەرایەتیی بەشێکی دەق (وەک ڕستەیەک یان پەڕەگرافێک) و وەرگێڕانەکەی دەکات.
+translation_text: دەقە وەرگێڕدراوەکە بۆ سەر زمانی کوردی.
 
-```json
+نموونە:
+
+code
+JSON
+download
+content_copy
+expand_less
+
 [
   {
     "id": "1.1",
@@ -40,7 +46,24 @@ Each JSON file contains an array of objects, where each object represents a segm
     "translation_text": "..."
   }
 ]
+چۆنیەتیی بەشداریکردن
 
+ئێمە بە گەرمی پێشوازی لە هەر بەشدارییەک دەکەین کە پڕۆژەکە دەوڵەمەندتر بکات. ئەگەر ئارەزوومەندی یارمەتیدان بیت لە وەرگێڕان، پێداچوونەوە، یان پێشنیارکردنی دەقی نوێ، تکایە issueـیەک بکەرەوە بۆ دەستپێکردنی گفتوگۆ یان pull requestـێک بنێرە.
 
----
+مۆڵەتنامە
 
+ئەم پڕۆژەیە و سەرجەم داتاکانی لەژێر مۆڵەتنامەی Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Internationalـدایە.
+
+ئەمەش واتە دەتوانیت بە ئازادی:
+
+هاوبەشی پێ بکەیت: داتاکان کۆپی بکەیت و دابەشی بکەیتەوە.
+
+گونجاندن بکەیت: داتاکان تێکەڵ بکەیت، بیگوێزیتەوە، و لەسەری بنیاد بنێیت.
+
+بەم مەرجانەی خوارەوە:
+
+ئاماژەپێدان (Attribution): دەبێت ئاماژەیەکی گونجاو بە سەرچاوەکە بدەیت.
+
+نام بازرگانی (NonCommercial): نابێت بۆ مەبەستی بازرگانی بەکاری بهێنیت.
+
+هاوشێوە بڵاوکردنەوە (ShareAlike): ئەگەر بەرهەمێکی نوێت لەسەر ئەم داتایانە بنیاد نا، دەبێت لەژێر هەمان مۆڵەتنامەدا بڵاوی بکەیتەوە.
